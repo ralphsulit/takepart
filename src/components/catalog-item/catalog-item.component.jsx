@@ -1,6 +1,7 @@
 import React from 'react';
 
 const CatalogItem = ({ catalog }) => {
+  // destructured catalog objects
   const { title, description, number } = catalog;
   return (
     <div>

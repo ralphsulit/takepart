@@ -1,4 +1,4 @@
-const catalogData = [
+const CatalogData = [
   {
     id: 1,
     title: 'Fibre Cable Tight Buffered MM 16 Fibre 0m3 50/125 LSZH Eca Black (Dia)7.8mm',
@@ -25,4 +25,4 @@ const catalogData = [
   },
 ];
 
-export default catalogData;
+export default CatalogData;
