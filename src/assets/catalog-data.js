@@ -24,3 +24,5 @@ const catalogData = [
     number: '60019533LAO1'
   },
 ];
+
+export default catalogData;
