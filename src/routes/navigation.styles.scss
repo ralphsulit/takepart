@@ -1,0 +1,20 @@
+@import '../assets/styles/varaiables.styles.scss';
+
+.navbar-container {
+  background-color: $white;
+
+  .navbar-brand {
+    font-weight: $medium;
+  }
+
+  .navbar-search-box {
+    width: 350px;
+    outline: none;
+  }
+
+  .no-border {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
