@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import SearchBox from '../search-box/search-box.component.jsx';
-import catalogData from '../../assets/catalog-data.json';
+import catalogData from '../../assets/data/catalog-data.json';
 import CatalogItem from '../catalog-item/catalog-item.component';
 
 const CatalogMenu = () => {
   // State variables
   const [searchField, setSearchField] = useState('');
 
-  // Getting the input and assigning it in searchField state
+  // Getting the input and assigning it to the searchField state
   const onSearchChange = (e) => {
     const searchFieldString = e.target.value.toLowerCase();
     console.log(searchFieldString)
@@ -20,7 +20,7 @@ const CatalogMenu = () => {
       {/* Getting the data from CatalogData and Maps through the array of catalog items */}
       <div className='catalog-body-container'>
         {/* 
-          getting the title property using filter and checks if the value of search bar is similar to the title propery in the data and also used the map function to iterate the array of data and get data items.
+          getting the title property using filter and checks if the value of search bar is similar to the "title" propery in the data and also used the map function to iterate the array of data and get data items.
         */}
         {catalogData && catalogData
           .filter((val) => {

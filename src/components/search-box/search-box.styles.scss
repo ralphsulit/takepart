@@ -1,0 +1,19 @@
+@import '../../assets/styles/varaiables.styles.scss';
+
+.searchbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 17px;
+  background-color: $gray;
+
+  .search-box {
+    color: $dark-gray;
+    padding: 6px;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    width: 100%;
+    max-width: 300px;
+  }
+}
