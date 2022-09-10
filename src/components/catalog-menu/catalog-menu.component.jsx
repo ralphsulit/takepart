@@ -1,20 +1,43 @@
-import React from 'react';
-import CatalogData from '../../assets/catalog-data.js';
+import React, { useState } from 'react';
 import SearchBox from '../search-box/search-box.component.jsx';
+import catalogData from '../../assets/catalog-data.json';
 import CatalogItem from '../catalog-item/catalog-item.component';
 
-const catalogItem = () => {
+const CatalogMenu = () => {
+  // State variables
+  const [searchField, setSearchField] = useState('');
+
+  // Getting the input and assigning it in searchField state
+  const onSearchChange = (e) => {
+    const searchFieldString = e.target.value.toLowerCase();
+    console.log(searchFieldString)
+    setSearchField(searchFieldString);
+  }
+
   return (
     <div className='catalog-container'>
-      <SearchBox />
-      {/* Maps through the array of catalog items */}
+      <SearchBox onChangeHandler={onSearchChange}/>
+      {/* Getting the data from CatalogData and Maps through the array of catalog items */}
       <div className='catalog-body-container'>
-        {CatalogData.map((catalog) => (
-          <CatalogItem catalog={catalog} />
-        ))};
+        {/* 
+          getting the title property using filter and checks if the value of search bar is similar to the title propery in the data and also used the map function to iterate the array of data and get data items.
+        */}
+        {catalogData && catalogData
+          .filter((val) => {
+            if (searchField === "") {
+              return val
+            } else if (val.title.toLowerCase().includes(searchField.toLowerCase())) {
+              return val
+            }
+            return false;
+          })
+          .map((val) => (
+            <CatalogItem key={val.id} catalog={val} />
+          ))
+        }
       </div>
     </div>
   );
 }
 
-export default catalogItem;
+export default CatalogMenu;
