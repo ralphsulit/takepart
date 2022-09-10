@@ -9,7 +9,7 @@
       font-size: 1.2rem;
 
         p {
-          color: #4C535B;
+          color: $gray;
           font-weight: $regular;
         }
     
@@ -19,8 +19,10 @@
         }
       
         .catalog-number {
+          color: $dark-gray;
+          font-size: 1.25rem;
           font-weight: $bold;
-          margin-left: 2px;
+          margin-left: 10px;
         }
       }
 
