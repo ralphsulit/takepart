@@ -31,7 +31,7 @@
       }
 
     @include md {
-      margin: 20px 30px;
+      margin: 20px 27px;
 
       h3 {
         font-size: calc(1.1rem + .6vw);
@@ -42,20 +42,15 @@
       }
     }
 
-    @include lg {
-      margin: 20px 40px;
-    }
-
     @include xl {
-      margin: 20px 40px;
 
-      h3 {
-        font-size: calc(0.8rem + .6vw)
-      }
+        h3 {
+          font-size: calc(0.8rem + .6vw)
+        }
 
-      .catalog-item-group {
-        font-size: 1.1rem;
-        width: 800px;
-      }
+        .catalog-item-group {
+          font-size: 1.1rem;
+          width: 800px;
+        }
     }
 }

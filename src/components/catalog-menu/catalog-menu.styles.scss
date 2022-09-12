@@ -3,25 +3,29 @@
 
 .content-container {
 
-  .content-header-container {
+  .left-container {
     margin: 20px;
     max-width: 100%;
-
-      .container {
         
-          // Search Box Component
-          .content-search-box {
-            border-bottom: 5px solid #000 !important;
-          }
+      // Search Box Component
+      .content-search-box {
+        border-bottom: 5px solid #000 !important;
       }
     
       @include lg {
         max-width: 1200px;
+        margin-left: 50px;
       }
 
       @include lg {
         max-width: 1000px;
       }
   } 
+
+  .right-container {
+    .hp-filter {
+      width: 450px;
+    }
+  }
 
 }
