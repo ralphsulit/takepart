@@ -1,9 +1,12 @@
 @import '../../assets/styles/varaiables.styles.scss';
+@import '../../assets/styles/mixins.styles.scss';
 
 .catalog-item-container {
-  font-size: 1.4rem;
-  padding: 10px;
-  margin: 20px 10px;
+  margin: 20px 8px;
+
+    h3 {
+      font-weight: $bold;
+    }
 
     .catalog-item-group {
       font-size: 1.2rem;
@@ -11,19 +14,39 @@
         p {
           color: $gray;
           font-weight: $regular;
+          margin-bottom: 0;
         }
-    
+        
         .catalog-description {
-          margin: 30px 0;
-          line-height: 30px;
+          margin: 15px 0;
+          line-height: 25px;
         }
-      
+        
         .catalog-number {
           font-size: 1.25rem;
           font-weight: $bold;
           margin-left: 10px;
         }
+
       }
 
+    @include md {
+      margin: 20px;
 
+      h3 {
+        font-size: calc(1.1rem + .6vw);
+      }
+
+      .catalog-item-group {
+        font-size: 1.1rem;
+      }
+    }
+
+    @include lg {
+      margin: 30px;
+    }
+
+    @include xl {
+      margin: 40px;
+    }
 }

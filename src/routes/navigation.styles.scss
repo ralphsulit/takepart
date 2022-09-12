@@ -1,20 +1,44 @@
 @import '../assets/styles/varaiables.styles.scss';
+@import '../assets/styles/mixins.styles.scss';
 
 .navbar-container {
   background-color: $white;
+  
+    // .container-fluid {
+    //   padding-right: calc(var(--bs-gutter-x) * 3.7);
+    //   padding-left: calc(var(--bs-gutter-x) * 3.7);
+    // }
 
-  .navbar-brand {
-    font-weight: $medium;
-  }
+    .navbar-brand {
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
 
-  .navbar-search-box {
-    width: 350px;
-    outline: none;
-  }
+    .navbar-search-box {
+      width: 350px;
+      outline: none;
+    }
 
-  .no-border {
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-  }
+    .no-border {
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .container-fluid {
+      @include md {
+        padding-right: calc(var(--bs-gutter-x) * 0.8);
+        padding-left: calc(var(--bs-gutter-x) * 0.8);
+      }
+      
+      @include lg {
+        padding-right: calc(var(--bs-gutter-x) * 1);
+        padding-left: calc(var(--bs-gutter-x) * 1);
+      }
+
+      @include xl {
+        padding-right: calc(var(--bs-gutter-x) * 1.8);
+        padding-left: calc(var(--bs-gutter-x) * 1.8);
+      }
+    }
 }
