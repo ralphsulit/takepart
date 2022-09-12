@@ -6,16 +6,17 @@
   align-items: center;
   padding: 15px 25px;
   background-color: $white;
-  width: 95%;
-  margin: 0 auto;
+  width: 85%;
 
     .search-box {
       color: $dark-gray;
-      padding: 6px 18px;
-      font-size: 24px;
+      font-size: 1.2rem;
+      font-weight: $bold;
       border: none;
       border-bottom: 5px solid #000;
       outline: none;
+      padding: 6px 18px;
       width: 100%;
+      height: 40px;
     }
 }

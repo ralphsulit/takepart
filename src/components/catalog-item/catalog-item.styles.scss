@@ -2,7 +2,7 @@
 @import '../../assets/styles/mixins.styles.scss';
 
 .catalog-item-container {
-  margin: 20px 8px;
+  margin: 20px;
 
     h3 {
       font-weight: $bold;
@@ -31,7 +31,7 @@
       }
 
     @include md {
-      margin: 20px;
+      margin: 20px 30px;
 
       h3 {
         font-size: calc(1.1rem + .6vw);
@@ -43,10 +43,19 @@
     }
 
     @include lg {
-      margin: 30px;
+      margin: 20px 40px;
     }
 
     @include xl {
-      margin: 40px;
+      margin: 20px 40px;
+
+      h3 {
+        font-size: calc(0.8rem + .6vw)
+      }
+
+      .catalog-item-group {
+        font-size: 1.1rem;
+        width: 800px;
+      }
     }
 }

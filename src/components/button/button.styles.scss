@@ -1,0 +1,17 @@
+@import '../../assets/styles/mixins.styles.scss';
+@import '../../assets/styles/varaiables.styles.scss';
+
+.search-btn {
+  background-color: $yellow;
+  border: none;
+  font-family: $rajdhani;
+  font-size: 2rem;
+  font-weight: $bold;
+  padding: 10px;
+  width: 90px;
+  margin-left: 30px;
+
+    @include lg {
+      margin-left: 0;
+    }
+}

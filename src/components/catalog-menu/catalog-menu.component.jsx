@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SearchBox from '../search-box/search-box.component.jsx';
+import Button from '../button/button.component';
 import catalogData from '../../assets/data/catalog-data.json';
 import CatalogItem from '../catalog-item/catalog-item.component';
 import './catalog-menu.styles.scss';
@@ -17,7 +18,11 @@ const CatalogMenu = () => {
 
   return (
     <div className='content-container'>
-      <SearchBox onChangeHandler={onSearchChange} className='content-search-box' />
+      <div className='content-header-container d-flex justify-content-between'>
+        <SearchBox onChangeHandler={onSearchChange} className='content-search-box' />
+        <Button />
+      </div>
+
       {/* Getting the data from CatalogData and Maps through the array of catalog items */}
       <div className='content-body-container'>
         {/* 

@@ -1,12 +1,27 @@
 @import '../../assets/styles/mixins.styles.scss';
 @import '../../assets/styles/varaiables.styles.scss';
 
-.content-body-container {
-  max-width: 100%;
-  margin: 0 auto;
+.content-container {
 
-  // Search Box Component
-  .content-search-box {
-    border-bottom: 5px solid #000 !important;
-  }
+  .content-header-container {
+    margin: 20px;
+    max-width: 100%;
+
+      .container {
+        
+          // Search Box Component
+          .content-search-box {
+            border-bottom: 5px solid #000 !important;
+          }
+      }
+    
+      @include lg {
+        max-width: 1200px;
+      }
+
+      @include lg {
+        max-width: 1000px;
+      }
+  } 
+
 }
